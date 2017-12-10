@@ -11,6 +11,7 @@ namespace CRUD_MVC5_AngularJs.Controllers
     {
         #region Método para Listar Funcionário - READ
 
+        // GET Funcionario/GetFuncionario
         public JsonResult GetFuncionário()
         {
             using (var db = new FuncionariosEntities())
