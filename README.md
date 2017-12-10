@@ -15,7 +15,9 @@ Repositório do tutorial do canal do meu canal do Youtube: [Glaucia Lemos](https
 
 - [Aula 01 - Introdução]()
 - [Aula 02 - Criando o projeto MVC]()
-- [Aula 03 - ]()
+- [Aula 03 - Criando a Classe & DB via ADO.NET Entity Data Model]()
+- [Aula 04 - Instalação do Pacote AngularJs via NuGet]()
+
 
 **(Documentação em desenvolvimento)**
 
