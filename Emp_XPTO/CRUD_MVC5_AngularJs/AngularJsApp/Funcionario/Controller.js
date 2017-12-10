@@ -15,7 +15,6 @@ funcionarioApp.controller('funcionarioCtrl', function ($scope, funcionarioServic
     function carregarFuncionarios() {
         var listarFuncionarios = funcionarioService.getTodosFuncionarios();
 
-
         listarFuncionarios.then(function (d) {
             //se tudo der certo:
             $scope.Funcionarios = d.data;

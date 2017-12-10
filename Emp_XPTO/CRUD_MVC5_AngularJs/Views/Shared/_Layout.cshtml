@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Tutorial CRUD: MVC 5 + EF + AngularJs</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
+<body ng-app="funcionarios">
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -27,16 +27,26 @@
             </div>
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+<div class="container body-content">
+    <div class="jumbotron">
+        <h1 class="text-center"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Tutorial CRUD: MVC 5 + EF + AngularJs</h1>
+        <h2 class="text-center">Glaucia Lemos</h2>
+        <h3 class="text-center">Software Engineer</h3>
+        <h4 class="text-center">Desenvolvido com muito <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Brasil, Rio de Janeiro <a href="http://www.code4coders.wordpress.com" target="_blank"> @DateTime.Now.Year</a> </h4>
+
     </div>
 
+    @RenderBody()
+    <hr/>
+    <footer>
+        <p class="text-center">&copy; @DateTime.Now.Year - My ASP.NET Application by Glaucia Lemos</p>
+    </footer>
+</div>
+    
+    @Scripts.Render("~/bundles/angular")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
 </body>
 </html>
