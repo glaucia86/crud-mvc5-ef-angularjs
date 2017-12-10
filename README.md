@@ -15,7 +15,7 @@ Repositório do tutorial do canal do meu canal do Youtube: [Glaucia Lemos](https
 
 - [Aula 01 - Introdução]()
 - [Aula 02 - Criando o projeto MVC]()
-- [Aula 03 - ]
+- [Aula 03 - ]()
 
 **(Documentação em desenvolvimento)**
 
