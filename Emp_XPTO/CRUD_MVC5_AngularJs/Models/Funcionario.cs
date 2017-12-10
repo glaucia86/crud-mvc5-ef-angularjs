@@ -10,8 +10,7 @@ using System;
 using System.Collections.Generic;
 
 namespace CRUD_MVC5_AngularJs.Models
-{
-       
+{      
     public partial class Funcionario
     {
         public int FuncionarioId { get; set; }
