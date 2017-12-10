@@ -152,10 +152,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Funcionario.cs">
+      <DependentUpon>FuncionarioDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\FuncionarioDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FuncionarioDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FuncionarioDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FuncionarioDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\FuncionarioDB.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -178,16 +186,26 @@
     <Content Include="Models\FuncionarioDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>FuncionarioDB.Context.cs</LastGenOutput>
+      <DependentUpon>FuncionarioDB.edmx</DependentUpon>
     </Content>
+    <Content Include="Models\FuncionarioDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FuncionarioDB.edmx</DependentUpon>
+      <LastGenOutput>FuncionarioDB.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="Models\FuncionarioDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>FuncionarioDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\FuncionarioDB.edmx.diagram">
+    <Content Include="Models\FuncionarioDB.edmx.diagram">
       <DependentUpon>FuncionarioDB.edmx</DependentUpon>
-    </None>
+    </Content>
+    <Content Include="Scripts\angular.min.js.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
