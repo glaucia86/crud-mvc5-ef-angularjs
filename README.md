@@ -13,11 +13,13 @@ Repositório do tutorial do canal do meu canal do Youtube: [Glaucia Lemos](https
 
 ## Conteúdo do Curso: (* em desenvolvimento)
 
-- [Aula 01 - Introdução]()
-- [Aula 02 - Criando o projeto MVC]()
-- [Aula 03 - Criando a Classe & DB via ADO.NET Entity Data Model]()
-- [Aula 04 - Instalação do Pacote AngularJs via NuGet]()
-- [Aula 05 - Recuperando dados via AngularJs]()
+- [Aula 01 - Introdução](https://youtu.be/WIqRHtnv6Ko)
+- [Aula 02 - Criando o projeto MVC](https://youtu.be/6vc4WMuadeU)
+- [Aula 03 - Criando a Classe & DB via ADO.NET Entity Data Model](https://youtu.be/2i4PHKeB1hw)
+- [Aula 04 - Instalação do Pacote AngularJs via NuGet](https://youtu.be/UV1tDMpAuhk)
+- [Aula 05 - Criando o Controller da classe 'Funcionario - LISTAR'](https://youtu.be/B65qGCa-Fc0)
+- [Aula 06 - Criando a lógica do Listar Funcionário no AngularJs.](https://youtu.be/Lfgjego-Wco)
+- [Aula 07 - Desenvolvimento do Listar na View.](https://youtu.be/96gYm8xnrV8)
 
 
 **(Documentação em desenvolvimento)**
