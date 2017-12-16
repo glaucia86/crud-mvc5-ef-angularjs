@@ -1,38 +1,31 @@
 ﻿<div class="container" ng-controller="funcionarioCtrl">
     <div class="panel panel-info">
         <div class="panel-heading">Listar Funcionários</div>
-        
-        <div class="panel-body">
-            <button type="button" class="btn btn-info" data-target="#AdicionarFuncionario" data-toggle="modal">
-                <span class="glyphicon glyphicon-plus"></span>   
-            </button>
-            <br/>
-        </div>
 
         <table class="table table-bordered center">
             <thead style="background-color: grey;">
-            <tr>
-                <th class="text-center">Id Funcionário</th>
-                <th class="text-center">Nome</th>
-                <th class="text-center">Email</th>
-                <th class="text-center">Departamento</th>
-                <th class="text-center">Cargo</th>
-                <th class="text-center">Ação</th>
-            </tr>
+                <tr>
+                    <th class="text-center">Id Funcionário</th>
+                    <th class="text-center">Nome</th>
+                    <th class="text-center">Email</th>
+                    <th class="text-center">Departamento</th>
+                    <th class="text-center">Cargo</th>
+                    <th class="text-center">Ação</th>
+                </tr>
             </thead>
 
             <tbody>
-            <tr ng-repeat="func in Funcionarios">
-                <td class="text-center">{{func.FuncionarioId}}</td>
-                <td class="text-center">{{func.Nome}}</td>
-                <td class="text-center">{{func.Email}}</td>
-                <td class="text-center">{{func.Departamento}}</td>
-                <td class="text-center">{{func.Cargo}}</td>
-                <td class="text-center" style="width: 200px">
-                    <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span></a>
-                    <a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
-                </td>
-            </tr>
+                <tr ng-repeat="func in Funcionarios">
+                    <td class="text-center">{{func.FuncionarioId}}</td>
+                    <td class="text-center">{{func.Nome}}</td>
+                    <td class="text-center">{{func.Email}}</td>
+                    <td class="text-center">{{func.Departamento}}</td>
+                    <td class="text-center">{{func.Cargo}}</td>
+                    <td class="text-center" style="width: 200px">
+                        <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span></a>
+                        <a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
@@ -41,5 +34,5 @@
 @section scripts {
     <script src="~/AngularJsApp/Funcionario/Modulejs.js"></script>
     <script src="~/AngularJsApp/Funcionario/Service.js"></script>
-    <script src="~/AngularJsApp/Funcionario/Controller.js"></script> 
+    <script src="~/AngularJsApp/Funcionario/Controller.js"></script>
 }

@@ -6,15 +6,16 @@
  * Author: Glaucia Lemos
  */
 
-funcionarioApp.service('funcionarioService', function($http) {
+funcionarioApp.service('funcionarioService', function ($http) {
 
     //Método responsável por Listar todos os Funcionários: READ
-    this.getTodosFuncionarios = function() {
+    this.getTodosFuncionarios = function () {
         return $http.get("/Funcionario/GetFuncionário");
     }
 
     //Método responsável por Adicionar Funcionário: CREATE
     this.adicionarFuncionario = function(funcionario) {
+
         var request = $http({
             method: 'post',
             url: '/Funcionario/AdicionarFuncionario',
@@ -23,4 +24,4 @@ funcionarioApp.service('funcionarioService', function($http) {
 
         return request;
     }
-})
+});

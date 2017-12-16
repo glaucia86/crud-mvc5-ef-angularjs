@@ -26,7 +26,7 @@ funcionarioApp.controller('funcionarioCtrl', function ($scope, funcionarioServic
     }
 
     //Método responsável por adicionar cada propriedade de um Novo Funcionário:
-    $scope.adicionarFuncionario = function () {
+    $scope.adicionarFuncionario = function() {
 
         var funcionario = {
             funcionarioId: $scope.funcionarioId,
@@ -38,25 +38,24 @@ funcionarioApp.controller('funcionarioCtrl', function ($scope, funcionarioServic
 
         var adicionarInfos = funcionarioService.adicionarFuncionario(funcionario);
 
-        adicionarInfos.then(function (d) {
+        adicionarInfos.then(function(d) {
             if (d.data.success === true) {
                 carregarFuncionarios();
-                alert("Funcionário adicionado com Sucesso!");
+                alert("Funcionário Adicionado com Sucesso!");
 
                 $scope.limparDados();
-
             } else { alert("Funcionário não Adicionado!"); }
         },
-            function () {
-                alert("Erro ocorrido ao tentar adicionar um Novo Funcionário!");
+            function() {
+                alert("Ocorreu um erro ao tentar adicionar um Novo Funcionário!");
             });
     }
 
-    //Limpar os campos após inserir os dados no db:
-    $scope.limparDados = function () {
-        $scope.funcionarioId = '',
-        $scope.nome = '',
-        $scope.email = '',
+    //Limpar os campos após inserir os dados no db://Limpar os campos após inserir os dados no db:
+    $scope.limparDados = function() {
+        $scope.funcionarioId = '';
+        $scope.nome = '';
+        $scope.email = '';
         $scope.departamento = '';
         $scope.cargo = '';
     }

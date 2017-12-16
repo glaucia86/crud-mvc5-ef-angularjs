@@ -26,8 +26,9 @@ namespace CRUD_MVC5_AngularJs.Controllers
 
         #region Método para Adicionar Funcionário - CREATE
 
-        //POST Funcionario/AdicionarFuncionário
-        public JsonResult AdicionarFuncionário(Funcionario funcionario)
+        //POST Funcionario/AdicionarFuncionario
+        [HttpPost]
+        public JsonResult AdicionarFuncionario(Funcionario funcionario)
         {
             if (funcionario != null)
             {
@@ -36,8 +37,8 @@ namespace CRUD_MVC5_AngularJs.Controllers
                     db.Funcionarios.Add(funcionario);
                     db.SaveChanges();
 
-                    return Json(new {success = true});
-                }              
+                    return Json(new { success = true });
+                }
             }
             return Json(new { success = false });
         }
