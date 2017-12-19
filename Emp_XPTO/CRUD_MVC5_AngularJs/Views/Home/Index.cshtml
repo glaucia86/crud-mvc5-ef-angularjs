@@ -2,7 +2,13 @@
     <div class="panel panel-info">
         <div class="panel-heading">Listar Funcionários</div>
 
-        <table class="table table-bordered center">
+        <div class="panel-body">
+            <button type="button" class="btn btn-info" data-target="#AdicionarFuncionario" data-toggle="modal">
+                <span class="glyphicon glyphicon-plus"></span>
+            </button>
+        </div>
+
+        <table class="table table-bordered">
             <thead style="background-color: grey;">
                 <tr>
                     <th class="text-center">Id Funcionário</th>
@@ -29,6 +35,44 @@
             </tbody>
         </table>
     </div>
+
+    @* INÍCIO MODAL -ADICIONAR FUNCIONÁRIO *@
+
+    <div class="modal" id="AdicionarFuncionario" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="text-info">Adicionar Funcionário</h3>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" name="AdicionarNovoFuncionarioForm">
+                        <div class="form-group">
+                            <input class="form-control" readonly="readonly" name="funcionarioId" type="hidden" placeholder="Id Funcionário" />
+                        </div>
+
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="nome" ng-model="nome" placeholder="Nome Funcionário" />
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="nome" ng-model="email" placeholder="E-mail" />
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="nome" ng-model="departamento" placeholder="Departamento" />
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="nome" ng-model="cargo" placeholder="Cargo" />
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="btnSalvar" data-dismiss="modal" ng-click="adicionarFuncionario()">Adicionar</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="limparDados()">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* FIM MODAL -ADICIONAR FUNCIONÁRIO *@
 </div>
 
 @section scripts {
