@@ -12,7 +12,7 @@ namespace CRUD_MVC5_AngularJs.Controllers
         #region Método para Listar Funcionário - READ
 
         // GET Funcionario/GetFuncionario
-        public JsonResult GetFuncionário()
+        public JsonResult GetFuncionario()
         {
             using (var db = new FuncionariosEntities())
             {
@@ -41,6 +41,34 @@ namespace CRUD_MVC5_AngularJs.Controllers
                 }
             }
             return Json(new { success = false });
+        }
+
+        #endregion
+
+        #region Método para Atualizar Funcionário - UPDATE
+
+        [HttpPost]
+        public JsonResult AtualizarFuncionario(Funcionario funcionario)
+        {
+            using (var db = new FuncionariosEntities())
+            {
+                var atualizarFuncionario = db.Funcionarios.Find(funcionario.FuncionarioId);
+
+                if (atualizarFuncionario == null)
+                {
+                    return Json(new {success = false});
+                }
+                else
+                {
+                    atualizarFuncionario.Nome = funcionario.Nome;
+                    atualizarFuncionario.Cargo = funcionario.Cargo;
+                    atualizarFuncionario.Departamento = funcionario.Departamento;
+                    atualizarFuncionario.Email = funcionario.Email;
+
+                    db.SaveChanges();
+                    return Json(new { success = true });
+                }
+            }           
         }
 
         #endregion
