@@ -10,8 +10,9 @@ funcionarioApp.service('funcionarioService', function ($http) {
 
     //Método responsável por Listar todos os Funcionários: READ
     this.getTodosFuncionarios = function () {
+
         return $http.get("/Funcionario/GetFuncionário");
-    }
+    },
 
     //Método responsável por Adicionar Funcionário: CREATE
     this.adicionarFuncionario = function(funcionario) {
@@ -23,5 +24,18 @@ funcionarioApp.service('funcionarioService', function ($http) {
         });
 
         return request;
+    },
+
+    //Método responsável por Atualizar Funcionário: UPDATE
+    this.atualizarFuncionario = function(funcionario) {
+
+        var request = $http({
+            method: 'post',
+            url: '/Funcionario/AtualizarFuncionario',
+            data: funcionario
+        });
+
+        return request;
     }
+
 });
