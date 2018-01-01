@@ -11,7 +11,7 @@ funcionarioApp.service('funcionarioService', function ($http) {
     //Método responsável por Listar todos os Funcionários: READ
     this.getTodosFuncionarios = function () {
 
-        return $http.get("/Funcionario/GetFuncionário");
+        return $http.get("/Funcionario/GetFuncionario");
     },
 
     //Método responsável por Adicionar Funcionário: CREATE
