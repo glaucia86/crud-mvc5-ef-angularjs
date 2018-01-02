@@ -28,8 +28,8 @@
                     <td class="text-center">{{func.Departamento}}</td>
                     <td class="text-center">{{func.Cargo}}</td>
                     <td class="text-center" style="width: 200px;">
-                        <a href="#" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span></a>
-                        <a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
+                        <a href="#" data-target="#AtualizarFuncionario" data-toggle="modal" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span></a>
+                        <a href="#" data-target="#ExcluirFuncionario" data-toggle="modal" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
                     </td>
                 </tr>
             </tbody>
@@ -37,7 +37,6 @@
     </div>
 
     @* INÍCIO MODAL -ADICIONAR FUNCIONÁRIO *@
-
     <div class="modal" id="AdicionarFuncionario" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -71,8 +70,8 @@
             </div>
         </div>
     </div>
+    @* FIM MODAL - ADICIONAR FUNCIONÁRIO *@
 
-    @* FIM MODAL -ADICIONAR FUNCIONÁRIO *@
 </div>
 
 @section scripts {

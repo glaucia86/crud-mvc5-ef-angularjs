@@ -26,16 +26,4 @@ funcionarioApp.service('funcionarioService', function ($http) {
         return request;
     },
 
-    //Método responsável por Atualizar Funcionário: UPDATE
-    this.atualizarFuncionario = function(funcionario) {
-
-        var request = $http({
-            method: 'post',
-            url: '/Funcionario/AtualizarFuncionario',
-            data: funcionario
-        });
-
-        return request;
-    }
-
 });

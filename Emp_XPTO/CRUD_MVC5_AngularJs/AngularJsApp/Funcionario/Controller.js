@@ -58,32 +58,6 @@ funcionarioApp.controller('funcionarioCtrl', function ($scope, funcionarioServic
         $scope.email = "";
         $scope.departamento = "";
         $scope.cargo = "";
-    },
-
-    //Método responsável por atualizar Funcionário:
-    $scope.atualizarFuncionario = function () {
-
-        var funcionario = {
-            funcionarioId: $scope.funcionarioId,
-            nome: $scope.nome,
-            departamento: $scope.departamento,
-            cargo: $scope.cargo,
-            email: $scope.email
-        };
-
-        var atualizarInfos = funcionarioService.atualizarFuncionario(funcionario);
-
-        atualizarInfos.then(function (d) {
-            if (d.data.success === true) {
-                carregarFuncionarios();
-
-                alert("Funcionário Atualizado com Sucesso!");
-                limparDados();
-            } else {
-                alert("Funcionário não Atualizado!");
-            }
-        }, function () {
-            alert("Ocorreu um erro ao tentar adicionar um Novo Funcionário!");
-        });
     }
+
 });
