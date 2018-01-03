@@ -45,5 +45,34 @@ namespace CRUD_MVC5_AngularJs.Controllers
 
         #endregion
 
+        #region Método para Atualizar Funcionário - UPDATE
+
+        [HttpPost]
+        public JsonResult AtualizarFuncionario(Funcionario funcionario)
+        {
+            using (var db = new FuncionariosEntities())
+            {
+                var funcionarioAtualizado = db.Funcionarios.Find(funcionario.FuncionarioId);
+
+                if (funcionarioAtualizado == null)
+                {
+                    return Json(new {success = false});
+                }
+
+                else
+                {
+                    funcionarioAtualizado.Nome = funcionario.Nome;
+                    funcionarioAtualizado.Departamento = funcionario.Departamento;
+                    funcionarioAtualizado.Cargo = funcionario.Cargo;
+                    funcionarioAtualizado.Email = funcionario.Email;
+
+                    db.SaveChanges();
+                    return Json(new { success = true });
+
+                }
+            }           
+        }
+        #endregion
+
     }
 }

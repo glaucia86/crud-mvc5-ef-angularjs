@@ -24,6 +24,6 @@ funcionarioApp.service('funcionarioService', function ($http) {
         });
 
         return request;
-    },
+    }
 
 });

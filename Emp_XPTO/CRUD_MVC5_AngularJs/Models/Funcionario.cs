@@ -6,18 +6,21 @@
 //    Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
 
 namespace CRUD_MVC5_AngularJs.Models
-{
-    using System;
-    using System.Collections.Generic;
-    
+{  
     public partial class Funcionario
     {
         public int FuncionarioId { get; set; }
+
         public string Nome { get; set; }
+
         public string Departamento { get; set; }
+
         public string Cargo { get; set; }
+
         public string Email { get; set; }
     }
 }
