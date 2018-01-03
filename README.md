@@ -2,7 +2,7 @@
 
 Repositório do tutorial do canal do meu canal do Youtube: [Glaucia Lemos](https://www.youtube.com/user/l32759) do desenvolvimento de uma pequena aplicação usando: MVC 5 + EF + AngularJs
 
-## Recursos Utilizados no Desenvolvimento da Apliacação:
+## Recursos Utilizados no Desenvolvimento da Aplicação:
 
 * Visual Studio 2017 - [DOWNLOAD AQUI](https://www.visualstudio.com/pt-br/thank-you-downloading-visual-studio/?sku=Community&rel=15)
 * Asp.NET MVC 5
