@@ -49,7 +49,7 @@ funcionarioApp.controller('funcionarioCtrl', function ($scope, funcionarioServic
             function () {
                 alert("Ocorreu um erro ao tentar adicionar um Novo Funcionário!");
             });
-    },
+    }
 
     //Limpar os campos após inserir os dados no db://Limpar os campos após inserir os dados no db:
     $scope.limparDados = function () {
@@ -60,4 +60,47 @@ funcionarioApp.controller('funcionarioCtrl', function ($scope, funcionarioServic
         $scope.cargo = "";
     }
 
+    //Método responsável por atualizar Funcionario pelo Id:
+    $scope.atualizarFuncionarioPorId = function (funcionario) {
+
+        $scope.AtualizadoFuncionarioId = funcionario.FuncionarioId;
+        $scope.AtualizadoNome = funcionario.AtualizadoNome;
+        $scope.AtualizadoEmail = funcionario.AtualizadoEmail;
+        $scope.AtualizadoDepartamento = funcionario.Departamento;
+        $scope.AtualizadoCargo = funcionario.Cargo;
+    }
+
+    //Método responsável por atualizar dados do Funcionario:
+    $scope.atualizarFuncionario = function () {
+        var funcionario = {
+            FuncionarioId: $scope.AtualizadoFuncionarioId,
+            Nome: $scope.AtualizadoNome,
+            Email: $scope.AtualizadoEmail,
+            Departamento: $scope.AtualizadoDepartamento,
+            Cargo: $scope.AtualizadoCargo
+        };
+
+        var atualizarInfos = funcionarioService.atualizarFuncionario(funcionario);
+        atualizarInfos.then(function (d) {
+            if (d.data.success === true) {
+                carregarFuncionarios();
+
+                alert("Funcionário Atualizado com Sucesso!");
+                $scope.limparDadosAtualizados();
+            } else {
+                alert("Funcionário não Atualizado!");
+            }
+        }, function () {
+            alert("Ocorreu um erro ao tentar atualizar o Funcionário!");
+        });
+    }
+
+    //Método responsável por Limpar os Dados depois de Atualizar Funcionário:
+    $scope.limparDadosAtualizados = function () {
+        $scope.AtualizadoFuncionarioId = '';
+        $scope.AtualizadoNome = '';
+        $scope.AtualizadoEmail = '';
+        $scope.AtualizadoDepartamento = '';
+        $scope.AtualizadoCargo = '';
+    }
 });

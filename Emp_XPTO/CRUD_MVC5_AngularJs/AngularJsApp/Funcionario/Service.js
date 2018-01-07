@@ -14,16 +14,27 @@ funcionarioApp.service('funcionarioService', function ($http) {
         return $http.get("/Funcionario/GetFuncionario");
     },
 
-    //Método responsável por Adicionar Funcionário: CREATE
-    this.adicionarFuncionario = function(funcionario) {
+        //Método responsável por Adicionar Funcionário: CREATE
+        this.adicionarFuncionario = function (funcionario) {
 
-        var request = $http({
-            method: 'post',
-            url: '/Funcionario/AdicionarFuncionario',
-            data: funcionario
-        });
+            var request = $http({
+                method: 'post',
+                url: '/Funcionario/AdicionarFuncionario',
+                data: funcionario
+            });
 
-        return request;
-    }
+            return request;
+        },
 
+        //Método responsável por Atualizar Funcionário Por Id: Update
+        this.atualizarFuncionario = function (funcionario) {
+
+            var request = $http({
+                method: 'post',
+                url: '/Funcionario/AtualizarFuncionario',
+                data: funcionario
+            });
+
+            return request;
+        }
 });
