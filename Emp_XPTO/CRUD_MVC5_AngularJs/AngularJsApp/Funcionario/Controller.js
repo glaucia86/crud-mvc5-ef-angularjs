@@ -64,8 +64,8 @@ funcionarioApp.controller('funcionarioCtrl', function ($scope, funcionarioServic
     $scope.atualizarFuncionarioPorId = function (funcionario) {
 
         $scope.AtualizadoFuncionarioId = funcionario.FuncionarioId;
-        $scope.AtualizadoNome = funcionario.AtualizadoNome;
-        $scope.AtualizadoEmail = funcionario.AtualizadoEmail;
+        $scope.AtualizadoNome = funcionario.Nome;
+        $scope.AtualizadoEmail = funcionario.Email;
         $scope.AtualizadoDepartamento = funcionario.Departamento;
         $scope.AtualizadoCargo = funcionario.Cargo;
     }
@@ -79,20 +79,20 @@ funcionarioApp.controller('funcionarioCtrl', function ($scope, funcionarioServic
             Departamento: $scope.AtualizadoDepartamento,
             Cargo: $scope.AtualizadoCargo
         };
-
         var atualizarInfos = funcionarioService.atualizarFuncionario(funcionario);
         atualizarInfos.then(function (d) {
-            if (d.data.success === true) {
-                carregarFuncionarios();
-
-                alert("Funcionário Atualizado com Sucesso!");
-                $scope.limparDadosAtualizados();
-            } else {
-                alert("Funcionário não Atualizado!");
-            }
-        }, function () {
-            alert("Ocorreu um erro ao tentar atualizar o Funcionário!");
-        });
+                if (d.data.success === true) {
+                    carregarFuncionarios();
+                    alert("Funcionario Atualizado com Sucesso!");
+                    $scope.limparDadosAtualizados();
+                }
+                else {
+                    alert("Funcionário não Atualizado");
+                }
+            },
+            function () {
+                alert("Ocorreu um erro ao tentar adicionar um Novo Funcionário!")
+            });
     }
 
     //Método responsável por Limpar os Dados depois de Atualizar Funcionário:

@@ -175,7 +175,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AngularJsApp\Funcionario\Controller.js" />
-    <Content Include="AngularJsApp\Funcionario\Modulejs.js" />
+    <Content Include="AngularJsApp\Funcionario\Module.js" />
     <Content Include="AngularJsApp\Funcionario\Service.js" />
     <Content Include="App_Data\Funcionarios.mdf" />
     <Content Include="App_Data\Funcionarios_log.ldf">
