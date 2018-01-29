@@ -23,7 +23,9 @@ Repositório do tutorial do canal do meu canal do Youtube: [Glaucia Lemos](https
 - [Aula 08 - Desenvolvendo Lógica Back-End - Adicionar](https://youtu.be/RCkQglbaoFU)
 - [Aula 09 - Desenvolvimento Lógica Front-End 'ADICIONAR'](https://youtu.be/LmNlUwvLnAA)
 - [Aula 10 - Desenvolvimento do Adicionar na View](https://youtu.be/JaENICXFhhs)
-- [Aula 11 - Desenvolvendo Lógica Back-End - Atualizar]()
+- [Aula 11 - Desenvolvendo Lógica Back-End - Atualizar](https://youtu.be/mLjwXqACHY0)
+- [Aula 12 - Desenvolvimento Lógica Front-End - Atualizar](https://youtu.be/qM7XR7iNGaM)
+- [Aula 13 - Desenvolvimento do Atualizar na View](https://youtu.be/VYAZ6nNmwIs)
 
 
 **(Documentação em desenvolvimento)**
