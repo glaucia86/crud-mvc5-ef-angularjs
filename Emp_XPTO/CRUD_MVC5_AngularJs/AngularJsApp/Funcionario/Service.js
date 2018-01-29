@@ -36,4 +36,10 @@ funcionarioApp.service('funcionarioService', function ($http) {
         });
         return requestAtualizado;
     }
+
+    //Método responsável por Excluir Funcionário Por Id: Delete
+    this.excluirFuncionario = function (AtualizadoFuncionarioId) {
+
+        return $http.post('/Funcionario/ExcluirFuncionario/' + AtualizadoFuncionarioId);
+    }
 });

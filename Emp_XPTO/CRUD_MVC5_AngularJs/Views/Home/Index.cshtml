@@ -29,8 +29,19 @@
                     <td class="text-center">{{func.Departamento}}</td>
                     <td class="text-center">{{func.Cargo}}</td>
                     <td class="text-center" style="width: 200px;">
-                        <a href="#" data-target="#AtualizarFuncionario" data-toggle="modal" class="btn btn-success" ng-click="atualizarFuncionarioPorId(func)"><span class="glyphicon glyphicon-pencil"></span></a>
-                        <a href="#" data-target="#ExcluirFuncionario" data-toggle="modal" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
+                        <a href="#"
+                           data-target="#AtualizarFuncionario"
+                           data-toggle="modal" class="btn btn-success"
+                           ng-click="atualizarFuncionarioPorId(func)">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                        <a href="#"
+                           data-target="#ExcluirFuncionario"
+                           id="btnExcluir"
+                           data-toggle="modal" class="btn btn-danger"
+                           ng-click="excluirFuncionarioPorId(func)">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </a>
                     </td>
                 </tr>
             </tbody>
@@ -77,7 +88,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h3 class="text-info">Atualizar Funcionario</h3>
+                        <h3 class="text-info">Atualizar Funcionário</h3>
                     </div>
                     <div class="modal-body" style="margin-left: 20px">
                         <form class="form-horizontal" name="AtualizarForm">
@@ -114,7 +125,27 @@
         @* FIM MODAL - ATUALIZAR FUNCIONÁRIO *@
 
         @* INÍCIO MODAL - EXCLUIR FUNCIONÁRIO *@
-        
+
+        <div class="modal" role="dialog" id="ExcluirFuncionario">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="text-info">Você tem certeza que deseja excluir o Funcionário?</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <p>Id do Funcionário : {{AtualizadoFuncionarioId}}</p>
+                            <p>Nome do Fucionário : {{AtualizadoNome}}</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" ng-click="excluirFuncionario(AtualizadoFuncionarioId)">Excluir</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         @* FIM MODAL - EXCLUIR FUNCIONÁRIO *@
 
     </div>

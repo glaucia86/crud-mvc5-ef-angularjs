@@ -56,7 +56,7 @@ namespace CRUD_MVC5_AngularJs.Controllers
 
                 if (funcionarioAtualizado == null)
                 {
-                    return Json(new {success = false});
+                    return Json(new { success = false });
                 }
 
                 else
@@ -70,9 +70,29 @@ namespace CRUD_MVC5_AngularJs.Controllers
                     return Json(new { success = true });
 
                 }
-            }           
+            }
         }
         #endregion
 
+        #region Método para Excluir Funcionário - DELETE
+
+        [HttpPost]
+        public JsonResult ExcluirFuncionario(int id)
+        {
+            using (var db = new FuncionariosEntities())
+            {
+                var funcionario = db.Funcionarios.Find(id);
+                if (funcionario == null)
+                {
+                    return Json(new { success = false });
+                }
+
+                db.Funcionarios.Remove(funcionario);
+                db.SaveChanges();
+
+                return Json(new { success = true });
+            }
+        }
+        #endregion
     }
 }

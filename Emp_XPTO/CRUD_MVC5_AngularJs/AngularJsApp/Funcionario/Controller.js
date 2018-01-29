@@ -70,6 +70,12 @@ funcionarioApp.controller('funcionarioCtrl', function ($scope, funcionarioServic
         $scope.AtualizadoCargo = funcionario.Cargo;
     }
 
+    //Método responsável por resgatar dados para a exclusão do Funcionário:
+    $scope.excluirFuncionarioPorId = function(funcionario) {
+        $scope.AtualizadoFuncionarioId = funcionario.FuncionarioId;
+        $scope.AtualizadoNome = funcionario.Nome;
+    }
+
     //Método responsável por atualizar dados do Funcionario:
     $scope.atualizarFuncionario = function () {
         var funcionario = {
@@ -91,7 +97,7 @@ funcionarioApp.controller('funcionarioCtrl', function ($scope, funcionarioServic
                 }
             },
             function () {
-                alert("Ocorreu um erro ao tentar adicionar um Novo Funcionário!")
+                alert("Ocorreu um erro ao tentar atualizar o Funcionário!");
             });
     }
 
@@ -102,5 +108,22 @@ funcionarioApp.controller('funcionarioCtrl', function ($scope, funcionarioServic
         $scope.AtualizadoEmail = '';
         $scope.AtualizadoDepartamento = '';
         $scope.AtualizadoCargo = '';
+    }
+
+    //Método responsável por excluir o Funcionario pelo Id:
+    $scope.excluirFuncionario = function (AtualizadoFuncionarioId) {
+
+        var excluirInfos = funcionarioService.excluirFuncionario($scope.AtualizadoFuncionarioId);
+        excluirInfos.then(function (d) {
+
+            if (d.data.success === true) {
+                carregarFuncionarios();
+
+                alert("Funcionário excluído com Sucesso!");
+            }
+            else {
+                alert("Funcionário não excluído!");
+            }
+        });
     }
 });
