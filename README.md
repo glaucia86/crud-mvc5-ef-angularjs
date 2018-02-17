@@ -26,6 +26,9 @@ Repositório do tutorial do canal do meu canal do Youtube: [Glaucia Lemos](https
 - [Aula 11 - Desenvolvendo Lógica Back-End - Atualizar](https://youtu.be/mLjwXqACHY0)
 - [Aula 12 - Desenvolvimento Lógica Front-End - Atualizar](https://youtu.be/qM7XR7iNGaM)
 - [Aula 13 - Desenvolvimento do Atualizar na View](https://youtu.be/VYAZ6nNmwIs)
+- [Aula 14 - Desenvolvendo Lógica Back-End - Excluir](https://youtu.be/EMt31PwN4j8)
+- [Aula 15 - Desenvolvimento Lógica Front-End - Excluir](https://youtu.be/nLRczXonvC8)
+- [Aula 16 - Desenvolvimento do Excluir na View](https://youtu.be/nLRczXonvC8)
 
 
 **(Documentação em desenvolvimento)**
