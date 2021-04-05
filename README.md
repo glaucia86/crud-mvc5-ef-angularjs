@@ -2,6 +2,12 @@
 
 Repositório do tutorial do canal do meu canal do Youtube: [Glaucia Lemos](https://www.youtube.com/user/l32759) do desenvolvimento de uma pequena aplicação usando: MVC 5 + EF + AngularJs
 
+## ☕ Apoie e Ajude esse Projeto! 
+
+Se você curte ou curtiu os vídeos feitos desse curso e deseja apoiar com um valor de um Cafezinho Brasileiro, então sinta-se à vontade em fazer o seu donation no botão abaixo:
+
+<a href='https://ko-fi.com/I3I644UCW' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi3.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
 ## Recursos Utilizados no Desenvolvimento da Aplicação:
 
 * Visual Studio 2017 - [DOWNLOAD AQUI](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&WT.mc_id=javascript-0000-gllemos)
